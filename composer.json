@@ -38,6 +38,7 @@
                 "Mireon\\SlidePanels\\Laravel\\Providers\\SlidePanelsServiceProvider"
             ],
             "aliases": {
+                "SlidePanels": "Mireon\\SlidePanels\\Laravel\\SlidePanelsFacade",
                 "Lever": "Mireon\\SlidePanels\\Laravel\\Levers\\LeverFacade"
             }
         }

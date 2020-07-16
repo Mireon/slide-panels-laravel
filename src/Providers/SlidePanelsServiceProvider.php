@@ -21,7 +21,13 @@ class SlidePanelsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(SlidePanelsInterface::class, fn() => SlidePanels::getInstance());
+        $this->registerConfig();
+
+        $this->app->singleton(SlidePanels::class, fn() => SlidePanels::getInstance());
+        $this->app->singleton(SlidePanelsInterface::class, function () {
+            $class = config('slide-panels.base', SlidePanels::class);
+            return $class::getInstance();
+        });
         $this->app->bind(Lever::class, fn() => new Lever());
     }
 
@@ -51,5 +57,18 @@ class SlidePanelsServiceProvider extends ServiceProvider
         , config('view.paths')), [$views]), 'slide-panels');
 
         $this->publishes([$views => $resources], 'views');
+    }
+
+    /**
+     * Register config.
+     *
+     * @return void
+     */
+    private function registerConfig(): void
+    {
+        $config = __DIR__ . '/../../resources/config/config.php';
+
+        $this->mergeConfigFrom($config, 'slide-panels');
+        $this->publishes([$config => config_path('slide-panels.php')], 'config');
     }
 }
