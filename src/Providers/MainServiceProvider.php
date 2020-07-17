@@ -2,6 +2,7 @@
 
 namespace Mireon\SlidePanels\Laravel\Providers;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Mireon\SlidePanels\Laravel\Levers\Lever;
 use Mireon\SlidePanels\Laravel\SlidePanels;
@@ -12,7 +13,7 @@ use Mireon\SlidePanels\SlidePanelsInterface;
  *
  * @package Mireon\SlidePanels\Laravel\Providers
  */
-class SlidePanelsServiceProvider extends ServiceProvider
+class MainServiceProvider extends ServiceProvider
 {
     /**
      * Register the application services.
@@ -25,7 +26,7 @@ class SlidePanelsServiceProvider extends ServiceProvider
 
         $this->app->singleton(SlidePanels::class, fn() => SlidePanels::getInstance());
         $this->app->singleton(SlidePanelsInterface::class, fn() =>
-            config('slide-panels.base', SlidePanels::class)::getInstance()
+            Config::get('slide-panels.main', SlidePanels::class)::getInstance()
         );
         $this->app->bind(Lever::class, fn() => new Lever());
     }
@@ -53,7 +54,7 @@ class SlidePanelsServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(array_merge(array_map(fn($path) =>
             "$path/$folders"
-        , config('view.paths')), [$views]), 'slide-panels');
+        , Config::get('view.paths')), [$views]), 'slide-panels');
 
         $this->publishes([$views => $resources], 'views');
     }

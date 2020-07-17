@@ -35,7 +35,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mireon\\SlidePanels\\Laravel\\Providers\\SlidePanelsServiceProvider"
+                "Mireon\\SlidePanels\\Laravel\\Providers\\MainServiceProvider",
+                "Mireon\\SlidePanels\\Laravel\\Providers\\ComposerServiceProvider"
             ],
             "aliases": {
                 "SlidePanels": "Mireon\\SlidePanels\\Laravel\\SlidePanelsFacade",
