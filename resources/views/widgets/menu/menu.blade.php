@@ -15,14 +15,14 @@ use Mireon\SlidePanels\Laravel\Widgets\Menu\Menu;
 $specialClass = $menu->hasKey() ? "slide-panels__menu-{$menu->getKey()}" : '';
 ?>
 
-<div class="slide-panels__menu <?= $specialClass; ?>">
-    <?php if ($menu->hasItems()): ?>
+<div class="slide-panels__menu {{ $specialClass }}">
+    @if($menu->hasItems())
         <ul class="slide-panels__menu__list">
-            <?php foreach ($menu as $item): ?>
+            @foreach($menu as $item)
                 <li class="slide-panels__menu__item">
-                    <?= $item->render(); ?>
+                    {!! $item->render() !!}
                 </li>
-            <?php endforeach; ?>
+            @endforeach
         </ul>
-    <?php endif; ?>
+    @endif
 </div>
