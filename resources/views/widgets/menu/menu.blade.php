@@ -11,9 +11,9 @@ use Mireon\SlidePanels\Laravel\Widgets\Menu\Menu;
  * @var ItemInterface $item
  *   A menu item.
  */
-
-$specialClass = $menu->hasKey() ? "slide-panels__menu-{$menu->getKey()}" : '';
 ?>
+
+@php($specialClass = $menu->hasKey() ? "slide-panels__menu-{$menu->getKey()}" : '')
 
 <div class="slide-panels__menu {{ $specialClass }}">
     @if($menu->hasItems())

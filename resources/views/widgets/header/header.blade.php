@@ -8,7 +8,6 @@ use Mireon\SlidePanels\Widgets\Header\Header;
  * @var Header $header
  *   A header widget.
  */
-
 ?>
 
 @php($specialClass = $header->hasKey() ? "slide-panels__header-{$header->getKey()}" : '')

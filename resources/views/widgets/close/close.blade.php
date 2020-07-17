@@ -8,8 +8,6 @@ use Mireon\SlidePanels\Widgets\Close\Close;
  * @var Close $close
  *   A close widget.
  */
-
-
 ?>
 
 @php($specialClass = $close->hasKey() ? "slide-panels__close-{$close->getKey()}" : '')
