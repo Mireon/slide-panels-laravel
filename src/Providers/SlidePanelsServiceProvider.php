@@ -24,10 +24,9 @@ class SlidePanelsServiceProvider extends ServiceProvider
         $this->registerConfig();
 
         $this->app->singleton(SlidePanels::class, fn() => SlidePanels::getInstance());
-        $this->app->singleton(SlidePanelsInterface::class, function () {
-            $class = config('slide-panels.base', SlidePanels::class);
-            return $class::getInstance();
-        });
+        $this->app->singleton(SlidePanelsInterface::class, fn() =>
+            config('slide-panels.base', SlidePanels::class)::getInstance()
+        );
         $this->app->bind(Lever::class, fn() => new Lever());
     }
 
@@ -38,15 +37,15 @@ class SlidePanelsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->bootViews();
+        $this->registerViews();
     }
 
     /**
-     * Bootstrap the views.
+     * Register views.
      *
      * @return void
      */
-    private function bootViews(): void
+    private function registerViews(): void
     {
         $folders = 'vendor/mireon/slide-panels';
         $views = __DIR__ . '/../../resources/views';

@@ -6,7 +6,7 @@ use Exception;
 use Mireon\SlidePanels\Panels\Panel;
 use Mireon\SlidePanels\Panels\PanelFactoryInterface;
 use Mireon\SlidePanels\SlidePanelsInterface;
-use Mireon\SlidePanels\Widgets\Header\Header;
+use Mireon\SlidePanels\Laravel\Widgets\Header\Header;
 
 /**
  * The account panel.

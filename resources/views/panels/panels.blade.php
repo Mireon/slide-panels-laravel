@@ -1,20 +1,20 @@
 <?php
 
-use Mireon\SlidePanels\Panels\Panel;
-use Mireon\SlidePanels\Panels\Panels;
+use Mireon\SlidePanels\Panels\PanelInterface;
+use Mireon\SlidePanels\Panels\PanelsInterface;
 
 /**
  * Prints the panels container.
  *
- * @var Panels $panels
+ * @var PanelsInterface $panels
  *   The panels container.
- * @var Panel $panel
+ * @var PanelInterface $panel
  *   A panel.
  */
 ?>
 
 <div class="slide-panels__panels">
     @foreach($panels as $panel)
-        {!! $panel !!}
+        {!! $panel->render() !!}
     @endforeach
 </div>

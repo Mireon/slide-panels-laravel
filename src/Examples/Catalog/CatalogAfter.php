@@ -3,10 +3,10 @@
 namespace Mireon\SlidePanels\Laravel\Examples\Catalog;
 
 use Exception;
+use Mireon\SlidePanels\Laravel\Widgets\Menu\Item;
+use Mireon\SlidePanels\Laravel\Widgets\Menu\Menu;
 use Mireon\SlidePanels\Panels\PanelFactoryInterface;
 use Mireon\SlidePanels\SlidePanelsInterface;
-use Mireon\SlidePanels\Widgets\Menu\Item;
-use Mireon\SlidePanels\Widgets\Menu\Menu;
 
 /**
  * The widget after the catalog.

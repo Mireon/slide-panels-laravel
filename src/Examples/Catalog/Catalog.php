@@ -3,13 +3,13 @@
 namespace Mireon\SlidePanels\Laravel\Examples\Catalog;
 
 use Exception;
+use Mireon\SlidePanels\Laravel\Widgets\Close\Close;
+use Mireon\SlidePanels\Laravel\Widgets\Menu\Item;
+use Mireon\SlidePanels\Laravel\Widgets\Menu\Menu;
 use Mireon\SlidePanels\Panels\Panel;
 use Mireon\SlidePanels\Panels\PanelFactoryInterface;
 use Mireon\SlidePanels\SlidePanelsInterface;
-use Mireon\SlidePanels\Widgets\Close\Close;
-use Mireon\SlidePanels\Widgets\Header\Header;
-use Mireon\SlidePanels\Widgets\Menu\Item;
-use Mireon\SlidePanels\Widgets\Menu\Menu;
+use Mireon\SlidePanels\Laravel\Widgets\Header\Header;
 
 /**
  * The catalog.

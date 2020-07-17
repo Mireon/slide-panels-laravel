@@ -5,11 +5,11 @@ namespace Mireon\SlidePanels\Laravel\Examples\Account;
 use Exception;
 use Illuminate\Http\Request;
 use Mireon\SlidePanels\Laravel\Examples\Catalog\Catalog;
+use Mireon\SlidePanels\Laravel\Widgets\Menu\Item;
+use Mireon\SlidePanels\Laravel\Widgets\Menu\Menu;
 use Mireon\SlidePanels\Levers\Lever;
 use Mireon\SlidePanels\Panels\PanelFactoryInterface;
 use Mireon\SlidePanels\SlidePanelsInterface;
-use Mireon\SlidePanels\Widgets\Menu\Item;
-use Mireon\SlidePanels\Widgets\Menu\Menu;
 
 /**
  * The account panel for the authenticated user.
