@@ -36,7 +36,7 @@ Copy these files to your the public directory and add them to a page.
 
 #### HTML
 
-To display panels, you must print the "SlidePanels" instance on a page. Do this at the end of the body tag.
+To display panels, you must output the "SlidePanels" instance on a page. Do this at the end of the body tag.
 
 If you are using the "views" configuration option from the `config/slide-panels.php` file, output the "slidePanels" variable.
 
@@ -101,7 +101,7 @@ class Controller extends BaseController
 
 #### Add a panel via a panel factory
 
-You can find more of panel factories in the path [vendor/mireon/slide-panels-laravel/Examples](https://github.com/Mireon/slide-panels-laravel/tree/master/src/Examples).
+You can find more of panel factories in the path [vendor/mireon/slide-panels-laravel/src/Examples](https://github.com/Mireon/slide-panels-laravel/tree/master/src/Examples).
 
 Create a class that implements the "PanelFactoryInterface" interface.
 
@@ -296,6 +296,18 @@ Html::create()
     ->key('catalog-caption')
     ->weight(5)
     ->html('<span style="padding: 10px; color: #ababab;">The main catalog!</span>');
+```
+
+## Commands
+
+Publish views.
+```sh
+$ php artisan vendor:publish --tag=views --force
+```
+
+Publish config.
+```sh
+$ php artisan vendor:publish --tag=config --force
 ```
 
 ## Tests
