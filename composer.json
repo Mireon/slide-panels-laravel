@@ -16,17 +16,11 @@
     "require": {
         "php": "^7.4",
         "illuminate/support": "^5.5",
-        "mireon/slide-panels": "dev-develop"
+        "mireon/slide-panels": "^0.0"
     },
     "require-dev": {
         "laravel/framework": "^5.5"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@mireon.github.com:Mireon/slide-panels.git"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Mireon\\SlidePanels\\Laravel\\": "src/"

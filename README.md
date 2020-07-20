@@ -1,11 +1,11 @@
 # The SlidePanels for Laravel
 
-[![PHP](https://img.shields.io/badge/php-7.4-green.svg?color=red)](https://github.com/Mireon/yandex-turbo)
-[![Size](https://img.shields.io/github/repo-size/mireon/slide-panels-laravel?color=green)](https://github.com/Mireon/yandex-turbo)
-[![License](https://img.shields.io/github/license/mireon/slide-panels-laravel?color=green)](https://github.com/Mireon/yandex-turbo)
-[![Release](https://img.shields.io/github/v/release/mireon/slide-panels-laravel?color=red)](https://github.com/Mireon/yandex-turbo)
+[![PHP](https://img.shields.io/badge/php-7.4-green.svg?color=red)](https://github.com/Mireon/slide-panels-laravel)
+[![Size](https://img.shields.io/github/repo-size/mireon/slide-panels-laravel?color=green)](https://github.com/Mireon/slide-panels-laravel)
+[![License](https://img.shields.io/github/license/mireon/slide-panels-laravel?color=green)](https://github.com/Mireon/slide-panels-laravel)
+[![Release](https://img.shields.io/github/v/release/mireon/slide-panels-laravel?color=red)](https://github.com/Mireon/slide-panels-laravel)
 
-![The presentation](https://github.com/Mireon/slide-panels/blob/master/docs/movies/presentation.gif?raw=true)
+![The presentation](https://user-images.githubusercontent.com/46637530/87967494-911b2780-cac7-11ea-98d0-e24ef65dbcd4.gif?raw=true)
 
 Based on [SlidePanel](https://github.com/Mireon/slide-panels)
 
@@ -226,7 +226,7 @@ Few widgets supplied in a box: Header, Menu, Html, Close. You can create your ow
 
 A HTML element containing an icon and text. A header can be small or big.
 
-![The "Header" widget](https://github.com/Mireon/slide-panels/blob/master/docs/images/widgets-header.jpg?raw=true)
+![The "Header" widget](https://user-images.githubusercontent.com/46637530/87967512-98423580-cac7-11ea-8e30-04d86e724983.jpg?raw=true)
 
 ```php
 <?php
@@ -245,7 +245,7 @@ Header::create()
 
 A vertical list of items.
 
-![The "Menu" widget](https://github.com/Mireon/slide-panels/blob/master/docs/images/widgets-menu.jpg?raw=true)
+![The "Menu" widget](https://user-images.githubusercontent.com/46637530/87967514-98dacc00-cac7-11ea-8bf7-8d3a35d3e0e1.jpg?raw=true)
 
 ```php
 <?php
@@ -269,7 +269,7 @@ Menu::create()
 
 A lever to close a panel.
 
-![The "Close" widget](https://github.com/Mireon/slide-panels/blob/master/docs/images/widgets-close.jpg?raw=true)
+![The "Close" widget](https://user-images.githubusercontent.com/46637530/87967511-98423580-cac7-11ea-8e4f-965d540c72c6.jpg?raw=true)
 
 ```php
 <?php
@@ -287,7 +287,7 @@ Close::create('Close', 'fa fa-close')
 
 Output the raw HTML.
 
-![The "Html" widget](https://github.com/Mireon/slide-panels/blob/master/docs/images/widgets-html.jpg?raw=true)
+![The "Html" widget](https://user-images.githubusercontent.com/46637530/87967513-98dacc00-cac7-11ea-8054-a28a8d76fc51.jpg?raw=true)
 
 ```php
 <?php
