@@ -1,4 +1,4 @@
-# The SlidePanels
+# The SlidePanels for Laravel
 
 [![PHP](https://img.shields.io/badge/php-7.4-green.svg?color=red)](https://github.com/Mireon/yandex-turbo)
 [![Size](https://img.shields.io/github/repo-size/mireon/slide-panels-laravel?color=green)](https://github.com/Mireon/yandex-turbo)
