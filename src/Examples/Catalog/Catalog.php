@@ -3,6 +3,7 @@
 namespace Mireon\SlidePanels\Laravel\Examples\Catalog;
 
 use Exception;
+use Illuminate\Http\Request;
 use Mireon\SlidePanels\Laravel\Widgets\Close\Close;
 use Mireon\SlidePanels\Laravel\Widgets\Menu\Item;
 use Mireon\SlidePanels\Laravel\Widgets\Menu\Menu;
@@ -24,6 +25,35 @@ class Catalog implements PanelFactoryInterface
     public const KEY = 'catalog';
 
     /**
+     * The request.
+     *
+     * @var Request
+     */
+    private Request $request;
+
+    /**
+     * The constructor.
+     *
+     * @param Request $request
+     *   A request.
+     */
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getFactories(): array
+    {
+        return [
+            CatalogAfter::class,
+            CatalogBefore::class,
+        ];
+    }
+
+    /**
      * @inheritDoc
      */
     public function doMake(): bool
@@ -38,9 +68,10 @@ class Catalog implements PanelFactoryInterface
      */
     public function make(SlidePanelsInterface $slidePanels): void
     {
-        $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/catalog';
+        $url = $this->request->getSchemeAndHttpHost() . '/catalog';
 
-        $slidePanels->getPanel(self::KEY)
+        $slidePanels
+            ->panel(self::KEY)
             ->width(960)
             ->side(Panel::LEFT)
             ->widget(Close::create()

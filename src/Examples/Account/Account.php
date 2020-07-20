@@ -23,6 +23,17 @@ class Account implements PanelFactoryInterface
     /**
      * @inheritDoc
      */
+    public function getFactories(): array
+    {
+        return [
+            AccountAnonymous::class,
+            AccountAuthenticated::class,
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function doMake(): bool
     {
         return true;
@@ -35,7 +46,8 @@ class Account implements PanelFactoryInterface
      */
     public function make(SlidePanelsInterface $slidePanels): void
     {
-        $slidePanels->getPanel(self::KEY)
+        $slidePanels
+            ->panel(self::KEY)
             ->side(Panel::RIGHT)
             ->widget(Header::create()
                 ->size(Header::BIG)

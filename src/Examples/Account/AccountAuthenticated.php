@@ -39,6 +39,14 @@ class AccountAuthenticated implements PanelFactoryInterface
     /**
      * @inheritDoc
      */
+    public function getFactories(): array
+    {
+        return [];
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function doMake(): bool
     {
         return $this->request->has('user');
@@ -51,10 +59,11 @@ class AccountAuthenticated implements PanelFactoryInterface
      */
     public function make(SlidePanelsInterface $slidePanels): void
     {
-        $host = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'];
+        $host = $this->request->getSchemeAndHttpHost();
         $query = 'user[name]=User';
 
-        $slidePanels->getPanel(Account::KEY)
+        $slidePanels
+            ->panel(Account::KEY)
             ->widget(Menu::create()
                 ->item(Item::create('Profile', "$host?$query"))
                 ->item(Item::create('Settings', "$host?$query"))
