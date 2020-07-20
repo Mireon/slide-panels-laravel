@@ -7,6 +7,8 @@
 
 ![The presentation](https://github.com/Mireon/slide-panels/blob/master/docs/movies/presentation.gif?raw=true)
 
+Based on [SlidePanel](https://github.com/Mireon/slide-panels)
+
 ## Install
 
 Install via [Composer](https://getcomposer.org/):
