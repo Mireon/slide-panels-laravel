@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ruleset name="Global">
+    <rule ref="PSR12"/>
+    <arg value="p"/>
+</ruleset>

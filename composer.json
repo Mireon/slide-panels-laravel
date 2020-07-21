@@ -1,7 +1,7 @@
 {
     "name": "mireon/slide-panels-laravel",
     "description": "Dynamic slide panels for Laravel.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "keywords": ["slide", "slider", "panel", "slide panel", "slide menu", "laravel"],
     "type": "library",
     "license": "MIT",
@@ -14,12 +14,13 @@
         }
     ],
     "require": {
-        "php": "^7.4",
-        "illuminate/support": "^5.5",
-        "mireon/slide-panels": "^0.0"
+        "php": ">=7.4",
+        "illuminate/support": ">=5.5",
+        "mireon/slide-panels": "0.0.x"
     },
     "require-dev": {
-        "laravel/framework": "^5.5"
+        "laravel/framework": ">=5.5",
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
         "psr-4": {
@@ -37,6 +38,11 @@
                 "Lever": "Mireon\\SlidePanels\\Laravel\\Levers\\LeverFacade"
             }
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-cover": "@test --coverage-html coverage",
+        "cs": "vendor/bin/phpcs ./src --standard=."
     },
     "minimum-stability": "dev",
     "prefer-stable": true
