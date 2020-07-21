@@ -26,7 +26,7 @@ class MainServiceProvider extends ServiceProvider
 
         $this->app->singleton(SlidePanels::class, fn() => SlidePanels::getInstance());
         $this->app->singleton(SlidePanelsInterface::class, function () {
-            Config::get('slide-panels.main', SlidePanels::class)::getInstance();
+            return Config::get('slide-panels.main', SlidePanels::class)::getInstance();
         });
         $this->app->bind(Lever::class, fn() => new Lever());
     }
