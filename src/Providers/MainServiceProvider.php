@@ -25,9 +25,9 @@ class MainServiceProvider extends ServiceProvider
         $this->registerConfig();
 
         $this->app->singleton(SlidePanels::class, fn() => SlidePanels::getInstance());
-        $this->app->singleton(SlidePanelsInterface::class, fn() =>
-            Config::get('slide-panels.main', SlidePanels::class)::getInstance()
-        );
+        $this->app->singleton(SlidePanelsInterface::class, function () {
+            Config::get('slide-panels.main', SlidePanels::class)::getInstance();
+        });
         $this->app->bind(Lever::class, fn() => new Lever());
     }
 
@@ -51,11 +51,9 @@ class MainServiceProvider extends ServiceProvider
         $folders = 'vendor/mireon/slide-panels';
         $views = __DIR__ . '/../../resources/views';
         $resources = resource_path("views/$folders");
+        $paths = array_merge(array_map(fn($path) => "$path/$folders", Config::get('view.paths')), [$views]);
 
-        $this->loadViewsFrom(array_merge(array_map(fn($path) =>
-            "$path/$folders"
-        , Config::get('view.paths')), [$views]), 'slide-panels');
-
+        $this->loadViewsFrom($paths, 'slide-panels');
         $this->publishes([$views => $resources], 'views');
     }
 
