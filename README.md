@@ -1,9 +1,7 @@
 # The SlidePanels for Laravel
 
 [![PHP](https://img.shields.io/badge/php-7.4-green.svg?color=red)](https://github.com/Mireon/slide-panels-laravel)
-[![Size](https://img.shields.io/github/repo-size/mireon/slide-panels-laravel?color=green)](https://github.com/Mireon/slide-panels-laravel)
 [![License](https://img.shields.io/github/license/mireon/slide-panels-laravel?color=green)](https://github.com/Mireon/slide-panels-laravel)
-[![Release](https://img.shields.io/github/v/release/mireon/slide-panels-laravel?color=red)](https://github.com/Mireon/slide-panels-laravel)
 
 ![The presentation](https://user-images.githubusercontent.com/46637530/87967494-911b2780-cac7-11ea-98d0-e24ef65dbcd4.gif?raw=true)
 
